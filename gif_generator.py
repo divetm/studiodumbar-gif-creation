@@ -62,8 +62,7 @@ for frame in range(len(frames)):
     for im in frames[frame]:
         new_im.paste(im, (x_offset, 0))
         x_offset += im.size[0]
-
-    new_im.save(f'frames_bis/{frame}.jpg')
+        
     images.append(new_im)
 
-images[0].save('ray_bis.gif', save_all=True, append_images=images[1:], optimize=False, duration=floor(1000/fps), loop=0)
+images[0].save('ray.gif', save_all=True, append_images=images[1:], optimize=False, duration=floor(1000/fps), loop=0)
